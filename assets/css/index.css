@@ -18,10 +18,12 @@ iframe {
 }
 
 .layui-body {
+  /* 将body主体的预览条隐藏掉 */
   overflow: hidden;
 }
 
 a {
+  /* 清楚c3动画效果（因为刷新的瞬间可能会有点问题 */
   transition: none !important;
 }
 
@@ -30,6 +32,7 @@ a {
   line-height: 60px;
   text-align: center;
   font-size: 12px;
+  /* 禁止内容被选中 */
   user-select: none;
 }
 
