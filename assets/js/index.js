@@ -59,20 +59,18 @@ function getUserInfo() {
 function renderAvatar(user) {
     // 1.获取用户名称（优先显示昵称，再显示用户名）
     var name = user.nickname || user.username
-    
     // 2.设置欢迎文本
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 3.1 有头像时渲染用户头像(显示用户头像隐藏默认头像)
     if (user.user_pic !== null) {
-        $('.layui-nav-img').attr('scr', user.user_pic).show()
-        $('text-avatar').hide()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
+        $('.text-avatar').hide()
     } else {
         // 3.2 无头像时渲染默认头像
         $('.layui-nav-img').hide()
         // 设置默认头像取用户名第一个字母的大写
         var first = name[0].toUpperCase()
         $('.text-avatar').html(first).show()
-
     }
     
 }
